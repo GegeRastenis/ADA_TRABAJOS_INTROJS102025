@@ -13,7 +13,7 @@ const { log } = require('node:console');
 
 const prompt = require('prompt-sync')(); 
 
-let numeroEntero = parseFloat(prompt("Por favor ingrese un numero entero: ")); 
+let numeroEntero = parseInt(prompt("Por favor ingrese un numero entero: ")); 
 
 if(numeroEntero %2 == 0){
     console.log("Su numero ingresado es par");
