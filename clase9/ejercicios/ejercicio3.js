@@ -5,17 +5,13 @@ combinaciones lógicas.*/
 
 const prompt = require("prompt-sync")(); 
 
-let condicion1 = prompt("Por favor ingrese un valor del tipo Booleano (true/false): "); 
-let condicion2 = prompt("Por favor ingrese un segundo valor del tipo Booleano (true/false): "); 
+let condicion1 = prompt("Por favor ingrese un valor del tipo Booleano: ") === 'true'; 
+let condicion2 = prompt("Por favor ingrese un segundo valor del tipo Booleano: ") === 'true'; 
 
-if(condicion1 == "true" && condicion2 == "true"){
-    console.log(`Segun los valores ingresados: ${condicion1} y ${condicion2}, su combinacion logica en una tabla de condicionalidad se traduce en: TRUE `);
-    
-}else if(condicion1 == "true" && condicion2 == "false"){
-    console.log(`Segun los valores ingresados: ${condicion1} y ${condicion2}, su combinacion logica en una tabla de condicionalidad se traduce en: FALSE`);
-    
-}else if(condicion1 == "false" && condicion2 == "true"){
-    console.log(`Segun los valores ingresados: ${condicion1} y ${condicion2}, su combinacion logica en una tabla de condicionalidad se traduce en: TRUE`);
-}else if(condicion1 == "false" && condicion2 == "false"){
-    console.log(`Segun los valores ingresados: ${condicion1} y ${condicion2}, su combinacion logica en una tabla de condicionalidad se traduce en: TRUE`);
-}; 
+console.log("Resultados logicos: ");
+console.log("AND (&&): " + (condicion1 && condicion2)); //Ambas deben ser verdaderas
+console.log("OR (||): " + (condicion1 || condicion2)); //Una tiene que ser true 
+console.log("NOT condicion1 (!): " + (!condicion1)); //Invierte el valor 
+
+
+
